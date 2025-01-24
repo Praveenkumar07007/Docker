@@ -60,10 +60,10 @@ docker run -it --rm -p 3002<host_port>:3000<container_port> app-bind-mount
 A Docker Volume is a storage mechanism used to persist data generated and used by containers. Unlike data stored in the container's filesystem, data in a volume is not deleted when the container stops or is removed. Volumes are managed by Docker and can also be shared between multiple containers.
 
 ## Why Use Docker Volumes?
-### Persistence: Keeps your data safe even after the container is deleted.
-### Efficiency: Avoids reinstalling dependencies (e.g., node_modules) every time a container restarts.
-### Development: Allows you to sync your local code with the container while keeping certain directories (like node_modules) isolated and persistent.
-### Sharing: Volumes can be shared between multiple containers.
+Persistence: Keeps your data safe even after the container is deleted.
+Efficiency: Avoids reinstalling dependencies (e.g., node_modules) every time a container restarts.
+Development: Allows you to sync your local code with the container while keeping certain directories (like node_modules) isolated and persistent.
+ Sharing: Volumes can be shared between multiple containers.
 How to Use Volumes with Node.js Projects
 ## Example: Persistent node_modules
 To persist the node_modules directory across container restarts:
@@ -104,8 +104,8 @@ docker volume rm node_modules
 ```
 
 ## Benefits of Using Volumes in Node.js
-### No Overwriting of node_modules: Your dependencies won't be overwritten by local code changes during development.
+No Overwriting of node_modules: Your dependencies won't be overwritten by local code changes during development.
 
-### Faster Development: Skip reinstalling dependencies after restarting the container.
+Faster Development: Skip reinstalling dependencies after restarting the container.
 
-### Data Safety: Volumes ensure your data persists even if the container is stopped or removed.
+Data Safety: Volumes ensure your data persists even if the container is stopped or removed.
